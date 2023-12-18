@@ -1,0 +1,47 @@
+﻿<Page x:Class="Cinema.Views.Pages.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Cinema.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="500"
+      Title="LoginPage"
+      TextBlock.Foreground="#698AFF">
+    <Grid>
+        <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Column="0" VerticalAlignment="Center" Grid.Row="0" Text="Логин" Margin="10"/>
+            <TextBlock Grid.Column="0" VerticalAlignment="Center" Grid.Row="1" Text="Пароль" Margin="10"/>
+
+            <TextBox Grid.Column="1" Grid.Row="0" x:Name="loginBox" Width="150" Margin="10" BorderBrush="#698AFF" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+            <PasswordBox Grid.Column="1" Grid.Row="1" x:Name="passwordBox" Width="150" Margin="10" BorderBrush="#698AFF" Style="{StaticResource MaterialDesignOutlinedPasswordBox}"/>
+        </Grid>
+
+        <Button Style="{StaticResource MaterialDesignRaisedButton}"
+                Grid.Column="1"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Margin="40"
+                Width="150"
+                Content="Войти"
+                Click="Login"/>
+
+        <Button Style="{StaticResource MaterialDesignRaisedButton}"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Margin="20"
+                Width="150"
+                Content="Войти как гость"
+                Click="LoginAsGuest"/>
+    </Grid>
+</Page>
